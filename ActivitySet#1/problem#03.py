@@ -1,5 +1,15 @@
 # Variables, Expressions & Statements
-hrs = float(input("Enter hours: "))
-rate=float(input("enter Rate:"))
-pay=hrs*rate
-print("Pay:",pay)
+def main():
+  hrs = input("Enter hours: ")
+  rate=input("enter Rate:")
+  total=compute(hrs,rate)
+  return output(total)
+  
+def compute(hrs,rate):
+  h=float(hrs)
+  r=float(rate)
+  pay=h*r
+  return pay
+def output(total):
+  return print("the pay is:",total)
+  
