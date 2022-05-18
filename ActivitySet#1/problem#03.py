@@ -12,4 +12,6 @@ def compute(hrs,rate):
   return pay
 def output(total):
   return print("the pay is:",total)
-  
+
+
+main()
