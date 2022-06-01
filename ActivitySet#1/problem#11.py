@@ -1,28 +1,19 @@
-# Tuples
-#Write a program to read through the mbox-short.txt and figure out the distribution  by hour of the day for each of the messages. You can pull the hour out from the 'From ' line by finding the time and then splitting the string a second time using a colon.
+#Open the file mbox-short.txt and read it line by line. When you find a line that starts with 'From ' like the following line:
 #From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
-#check file location too!
-#Once you have accumulated the counts for each hour, print out the counts, sorted by hour as shown below.
+#You will parse the From line using split() and print out the second word in the line (i.e. the entire address of the person who sent the message). Then print out a count at the end.
+fname = input("Enter file name: ")
+fh = open(fname)
+count=0
+for line in fh:
+    line = line.rstrip()
+    if line == "": continue
+        
+    words = line.split()
+    if words[0] !="From": continue
+        
+    print(words[1])
+    count = count+1
 
-name = input("Enter file:")
-if len(name) < 1:
-    name = "mbox-short.txt"
-handle = open(name)
-d=dict()
-for line in handle:
-    if not line.startswith("From "): 
-        continue
-    else:    
-        line=line.split()
-        line=line[5]
-        line=line[0:2]
-        d[line]=d.get(line,0)+1
+print("There were", count, "lines in the file with From as the first word")
 
-lst=list()        
-for value,count in d.items():
-    lst.append((value,count))
 
-lst.sort()
-for value,count in lst:
-    print(value,count)
-  
