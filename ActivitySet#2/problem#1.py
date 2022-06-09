@@ -1,5 +1,4 @@
-
-
+#adding
 def add(a, b):
     c=int(a)+int(b)
     return c
@@ -9,5 +8,5 @@ def main():
     b = input (print("Enter number2:"))
 
     c = add(a, b)
-    print c 
+    print c
 main()
