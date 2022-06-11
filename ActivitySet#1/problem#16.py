@@ -1,2 +1,2 @@
-#program
-# https://www.py4e.com/lessons/database
+
+#doing this dated 110622
