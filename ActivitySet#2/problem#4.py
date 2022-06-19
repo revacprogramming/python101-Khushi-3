@@ -1,4 +1,4 @@
-#commit prgm
+#commit done
 
 def get_cs():
     """get string input"""
