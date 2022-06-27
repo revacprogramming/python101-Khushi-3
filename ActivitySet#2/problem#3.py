@@ -9,6 +9,7 @@ def cs_to_lot(cs):
 
 
 def main():
+  #GET
     cs = get_cs()
 
     lot = cs_to_lot(cs)
