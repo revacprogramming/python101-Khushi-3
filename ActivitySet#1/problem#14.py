@@ -1,3 +1,19 @@
-#n this assignment you will read through and parse a file with text and numbers. You will extract all the numbers in the file and compute the sum of the numbers.
-#source:http://py4e-data.dr-chuck.net/regex_sum_1543888.txt
-#doing this dated 110622
+# Using Web Services
+# https://www.py4e.com/lessons/servces
+import re
+hand=open("actual.txt")
+count=0
+total=0
+for line in hand:
+    line=line.strip("") 
+    num=re.findall('[0-9]+',line)
+    try:
+        for i in num:
+            if int(i):
+                print(i)
+                total=total+int(i)
+                count=count+1
+    except:
+        continue
+print("TOTAL COUNT:- ",count)
+print("SUM:- ",total)
