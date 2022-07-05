@@ -14,3 +14,4 @@ for i in c:
 #==============METHOD 2==========
 m = Menu("idly ", 'vada ') + Menu("10", '20')
 print(m)
+#123
