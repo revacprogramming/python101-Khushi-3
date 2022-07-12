@@ -24,7 +24,7 @@ def dict_to_cs(d):
         final+=col
     size2=len(final)
     return final[:size2-1]
-        
+        #r
     
 
 def main():
