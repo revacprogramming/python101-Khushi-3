@@ -23,3 +23,4 @@ def lot_to_cs(lot):
         final+=col
     size=len(final)
     return final[:size-1]
+#sone
